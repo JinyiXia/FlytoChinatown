@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Pre trip · FlytoChinatown</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+  <meta name="author" content="Jinyi Xia">
+  <meta name="description" content="Pre trip checklist for China travel">
+
+  <!-- 继承模板样式 -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/flexslider.css">
+  <link rel="stylesheet" href="assets/css/animsition.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/owl.carousel.css">
+  <link rel="stylesheet" href="assets/css/owl.theme.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+
+  <!-- 轻量补充样式：圆角卡片、清单样式（尽量不与主题冲突） -->
+  <style>
+    :root{
+      --mint:#3CC7A6;
+      --ink:#222;
+      --muted:#6b7280;
+      --card:#fff;
+      --bd:#eee;
+      --radius:16px;
+      --shadow:0 8px 24px rgba(0,0,0,.06);
+    }
+    body{background:linear-gradient(180deg,#f7fafc,#fff)}
+    section{scroll-margin-top:80px}
+
+    .page-hero{
+      padding:70px 0 30px;
+      text-align:center;
+    }
+    .page-hero h1{font-weight:700;margin:0 0 10px}
+    .page-hero p{color:var(--muted);margin:0}
+
+    .grid{display:grid;gap:18px}
+    .grid-2{grid-template-columns:1fr 1fr}
+    @media (max-width:992px){.grid-2{grid-template-columns:1fr}}
+
+    .card{
+      background:var(--card);
+      border:1px solid var(--bd);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px 18px 8px;
+    }
+    .card h3{margin:0 0 8px}
+    .sub{color:var(--muted);font-size:14px;margin:0 0 12px}
+
+    .checklist{list-style:none;margin:0;padding:0}
+    .checklist li{
+      display:flex;align-items:flex-start;gap:12px;
+      padding:10px 12px;border:1px dashed #e9e9e9;border-radius:12px;margin-bottom:10px;background:#fff;
+    }
+    .checklist input[type="checkbox"]{
+      transform:scale(1.2);margin-top:3px;cursor:pointer;
+    }
+    .checklist label{
+      flex:1;cursor:pointer;line-height:1.45
+    }
+    .pill{
+      display:inline-block;padding:4px 10px;border:1px solid var(--bd);
+      border-radius:999px;font-size:12px;background:#fff;margin-left:6px;color:var(--muted)
+    }
+    .tag{
+      display:inline-block;padding:4px 8px;border-radius:8px;
+      background:#ecfeff;border:1px solid #d6f3f6;font-size:12px;margin-left:6px
+    }
+    .btn-bar{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}
+    .btn-lite{
+      border:1px solid var(--bd);background:#fff;border-radius:12px;padding:8px 12px;display:inline-flex;gap:8px;align-items:center
+    }
+    .save-hint{font-size:12px;color:var(--muted);margin-top:8px}
+    .hr{height:1px;background:#f0f0f0;margin:18px 0}
+
+    /* Weather & Clothes */
+    .weather-note{
+      padding:10px 12px;border:1px dashed #e9e9e9;border-radius:12px;background:#fff;color:#374151
+    }
+    .clothes-grid{display:grid;gap:10px;grid-template-columns:repeat(2,1fr)}
+    @media (max-width:768px){.clothes-grid{grid-template-columns:1fr}}
+
+    /* 顶部返回首页按钮 */
+    .to-home{margin:10px 0 0;text-align:center}
+    .to-home a{border:1px solid var(--bd);padding:8px 12px;border-radius:12px;display:inline-block;background:#fff}
+  </style>
+</head>
+
+<body class="animsition">
+  <!-- 边框保持 -->
+  <span class="frame-line top-frame visible-lg"></span>
+  <span class="frame-line right-frame visible-lg"></span>
+  <span class="frame-line bottom-frame visible-lg"></span>
+  <span class="frame-line left-frame visible-lg"></span>
+
+  <!-- Header（与模板一致，导航指回 index.html 的锚点） -->
+  <header class="main-header">
+    <div class="container-fluid">
+      <div class="box-header">
+        <div class="box-logo">
+          <a href="index.html#home"><img src="assets/img/logo.png" width="80" alt="Logo"></a>
+        </div>
+        <a class="box-primary-nav-trigger" href="#0"><span class="box-menu-icon"></span></a>
+      </div>
+
+      <nav>
+        <ul class="box-primary-nav">
+          <li class="box-label">FlytoChinatown</li>
+          <li><a href="index.html#home">Home</a><i class="lnr lnr-home"></i></li>
+          <li><a href="index.html#pretrip">Pre trip</a></li>
+          <li><a href="index.html#agenda">Agenda</a></li>
+          <li><a href="index.html#important">Important</a></li>
+          <li><a href="index.html#settings">Settings</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>Pre trip · 行前准备</h1>
+      <p>Documents · Weather · Clothes | 证件 · 天气 · 衣物</p>
+      <div class="to-home"><a href="index.html#pretrip"><i class="fa fa-angle-left"></i> Back to overview</a></div>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <main class="mb-50">
+    <div class="container">
+      <div class="grid grid-2">
+
+        <!-- Paul's checklist -->
+        <section class="card" id="paul">
+          <h3>Paul’s Checklist <span class="tag">Vegan</span></h3>
+          <p class="sub">Documents & Essentials | 证件与要件</p>
+
+          <ul class="checklist" data-list-key="pretrip_paul">
+            <li>
+              <input id="paul-passport" type="checkbox" />
+              <label for="paul-passport">
+                Passport valid 6+ months | 护照有效期≥6个月
+                <span class="pill">scan/PDF saved</span>
+              </label>
+            </li>
+            <li>
+              <input id="paul-visa" type="checkbox" />
+              <label for="paul-visa">
+                China visa approved | 中国签证（已签发）
+                <span class="pill">appointment · 收据</span>
+              </label>
+            </li>
+            <li>
+              <input id="paul-itinerary" type="checkbox" />
+              <label for="paul-itinerary">
+                Flights & hotel PDFs | 机票/酒店 PDF
+                <span class="pill">offline copy</span>
+              </label>
+            </li>
+            <li>
+              <input id="paul-insurance" type="checkbox" />
+              <label for="paul-insurance">
+                Travel insurance | 旅行保险
+                <span class="pill">policy PDF</span>
+              </label>
+            </li>
+            <li>
+              <input id="paul-wallet" type="checkbox" />
+              <label for="paul-wallet">
+                Wallet: cards + some cash | 钱包：银行卡 & 少量现金
+                <span class="pill">USD/CNY</span>
+              </label>
+            </li>
+            <li>
+              <input id="paul-wechat" type="checkbox" />
+              <label for="paul-wechat">
+                WeChat installed & ID noted | 安装微信并记录ID
+                <span class="pill">contacts/紧急联系人</span>
+              </label>
+            </li>
+            <li>
+              <input id="paul-esim" type="checkbox" />
+              <label for="paul-esim">
+                eSIM/physical SIM plan | eSIM/实体卡流量
+                <span class="pill">QR ready</span>
+              </label>
+            </li>
+            <li>
+              <input id="paul-power" type="checkbox" />
+              <label for="paul-power">
+                Power adapter (US→CN) | 电源转换头
+                <span class="pill">Type A→I</span>
+              </label>
+            </li>
+            <li>
+              <input id="paul-vegan" type="checkbox" />
+              <label for="paul-vegan">
+                Vegan dining card (CN/EN) | 素食说明小卡（中英）
+                <span class="pill">print</span>
+              </label>
+            </li>
+          </ul>
+
+          <div class="btn-bar">
+            <button class="btn-lite" data-action="check-all" data-target="pretrip_paul"><i class="fa fa-check-square-o"></i> Check all</button>
+            <button class="btn-lite" data-action="uncheck-all" data-target="pretrip_paul"><i class="fa fa-square-o"></i> Uncheck all</button>
+            <button class="btn-lite" data-action="reset" data-target="pretrip_paul"><i class="fa fa-refresh"></i> Reset saved</button>
+          </div>
+          <div class="save-hint">Tips: 勾选会自动保存（本地存储），离线可用。</div>
+        </section>
+
+        <!-- Jinyi's checklist -->
+        <section class="card" id="jinyi">
+          <h3>Jinyi’s Checklist <span class="tag">F-1</span></h3>
+          <p class="sub">Documents & Essentials | 证件与要件</p>
+
+          <ul class="checklist" data-list-key="pretrip_jinyi">
+            <li>
+              <input id="jy-passport" type="checkbox" />
+              <label for="jy-passport">
+                Passport valid 6+ months | 护照有效期≥6个月
+                <span class="pill">scan/PDF</span>
+              </label>
+            </li>
+            <li>
+              <input id="jy-i20" type="checkbox" />
+              <label for="jy-i20">
+                I-20 with valid travel signature | I-20 有效旅行签字
+                <span class="pill">within 12 months / 最近12个月</span>
+              </label>
+            </li>
+            <li>
+              <input id="jy-visa" type="checkbox" />
+              <label for="jy-visa">
+                F-1 visa valid | F-1签证仍在有效期
+                <span class="pill">expiry check</span>
+              </label>
+            </li>
+            <li>
+              <input id="jy-proof" type="checkbox" />
+              <label for="jy-proof">
+                Enrollment / GA letter | 在读/助研证明（可选）
+                <span class="pill">PDF</span>
+              </label>
+            </li>
+            <li>
+              <input id="jy-itinerary" type="checkbox" />
+              <label for="jy-itinerary">
+                Flights & hotel PDFs | 机票/酒店 PDF
+                <span class="pill">offline</span>
+              </label>
+            </li>
+            <li>
+              <input id="jy-insur" type="checkbox" />
+              <label for="jy-insur">
+                Health / travel insurance | 医保/旅行险
+                <span class="pill">card/PDF</span>
+              </label>
+            </li>
+            <li>
+              <input id="jy-wallet" type="checkbox" />
+              <label for="jy-wallet">
+                Wallet: cards + some cash | 钱包：银行卡 & 少量现金
+                <span class="pill">USD/CNY</span>
+              </label>
+            </li>
+            <li>
+              <input id="jy-wechat" type="checkbox" />
+              <label for="jy-wechat">
+                WeChat & Alipay ready | 微信/支付宝设置
+                <span class="pill">实名/绑定</span>
+              </label>
+            </li>
+            <li>
+              <input id="jy-power" type="checkbox" />
+              <label for="jy-power">
+                Power adapter (US→CN) | 电源转换头
+                <span class="pill">Type A→I</span>
+              </label>
+            </li>
+          </ul>
+
+          <div class="btn-bar">
+            <button class="btn-lite" data-action="check-all" data-target="pretrip_jinyi"><i class="fa fa-check-square-o"></i> Check all</button>
+            <button class="btn-lite" data-action="uncheck-all" data-target="pretrip_jinyi"><i class="fa fa-square-o"></i> Uncheck all</button>
+            <button class="btn-lite" data-action="reset" data-target="pretrip_jinyi"><i class="fa fa-refresh"></i> Reset saved</button>
+          </div>
+          <div class="save-hint">Tips: 勾选会自动保存（本地存储），离线可用。</div>
+        </section>
+
+        <!-- Weather & Clothes -->
+        <section class="card" id="weather-clothes">
+          <h3>Weather & Clothes · 天气和衣物</h3>
+          <p class="sub">手动记录关键温度区间，按城市打包（离线可查看）</p>
+
+          <div class="weather-note">
+            <b>Temp notes | 温度备注：</b>
+            <div class="hr"></div>
+            <ul style="padding-left:18px">
+              <li>上海 Shanghai：白天 __℃ / 夜间 __℃</li>
+              <li>宝应/扬州 Baoying/YZ：白天 __℃ / 夜间 __℃</li>
+              <li>重庆 Chongqing：白天 __℃ / 夜间 __℃</li>
+              <li>武汉 Wuhan：白天 __℃ / 夜间 __℃</li>
+              <li>徽州/黄山 Huizhou/Huangshan：白天 __℃ / 夜间 __℃</li>
+              <li>杭州/苏州 Hangzhou/Suzhou：白天 __℃ / 夜间 __℃</li>
+            </ul>
+          </div>
+
+          <div class="hr"></div>
+          <div class="clothes-grid">
+            <div class="weather-note">
+              <b>Outerwear | 外套</b>
+              <ul style="padding-left:18px;margin:8px 0 0">
+                <li>轻羽绒/保暖抓绒 Light down / fleece</li>
+                <li>防风外壳 Windbreaker / shell</li>
+                <li>帽子/手套/围巾 Hat/Gloves/Scarf</li>
+              </ul>
+            </div>
+            <div class="weather-note">
+              <b>Layers | 打底与层次</b>
+              <ul style="padding-left:18px;margin:8px 0 0">
+                <li>保暖内衣 Thermal base</li>
+                <li>长袖/毛衣 Long-sleeve / sweater</li>
+                <li>厚袜子 Warm socks</li>
+              </ul>
+            </div>
+            <div class="weather-note">
+              <b>Footwear | 鞋袜</b>
+              <ul style="padding-left:18px;margin:8px 0 0">
+                <li>徒步鞋 Hiking shoes</li>
+                <li>舒适步行鞋 Walking shoes</li>
+                <li>拖鞋 Slippers（家里/浴室）</li>
+              </ul>
+            </div>
+            <div class="weather-note">
+              <b>Misc | 其他</b>
+              <ul style="padding-left:18px;margin:8px 0 0">
+                <li>雨伞/雨衣 Umbrella / raincoat</li>
+                <li>暖宝宝 Hand warmers</li>
+                <li>药品与处方 Medicines & prescriptions</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer（简版） -->
+  <footer class="main-footer">
+    <svg preserveAspectRatio="none" viewBox="0 0 100 102" height="100" width="100%">
+      <path d="M0 0 L50 100 L100 0 Z" fill="#fff"></path>
+    </svg>
+    <div class="container">
+      <p>&copy; FlytoChinatown</p>
+    </div>
+  </footer>
+
+  <!-- 脚本：仍沿用模板脚本；新增本页的 checklist 保存逻辑 -->
+  <script src="assets/js/jquery-2.2.3.min.js"></script>
+  <script src="assets/js/animated-headline.js"></script>
+  <script src="assets/js/menu.js"></script>
+  <script src="assets/js/modernizr.js"></script>
+  <script src="assets/js/isotope.pkgd.min.js"></script>
+  <script src="assets/js/jquery.flexslider-min.js"></script>
+  <script src="assets/js/jquery.animsition.min.js"></script>
+  <script src="assets/js/init.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/smooth-scroll.js"></script>
+  <script src="assets/js/numscroller.js"></script>
+  <script src="assets/js/wow.min.js"></script>
+  <script src="assets/js/owl.carousel.min.js"></script>
+
+  <script>
+    // Checklist persistence（localStorage）
+    (function(){
+      function load(list){
+        var key = list.dataset.listKey;
+        try{
+          var data = JSON.parse(localStorage.getItem(key) || "{}");
+          list.querySelectorAll('input[type="checkbox"]').forEach(function(cb){
+            if (data.hasOwnProperty(cb.id)) cb.checked = !!data[cb.id];
+          });
+        }catch(e){}
+      }
+      function save(list){
+        var key = list.dataset.listKey, data = {};
+        list.querySelectorAll('input[type="checkbox"]').forEach(function(cb){
+          data[cb.id] = cb.checked ? 1 : 0;
+        });
+        localStorage.setItem(key, JSON.stringify(data));
+      }
+      document.querySelectorAll('.checklist').forEach(function(list){
+        load(list);
+        list.addEventListener('change', function(){ save(list); });
+      });
+      // buttons
+      document.querySelectorAll('.btn-lite').forEach(function(btn){
+        btn.addEventListener('click', function(){
+          var action = btn.dataset.action;
+          var target = btn.dataset.target;
+          var list = document.querySelector('.checklist[data-list-key="'+target+'"]');
+          if(!list) return;
+          if(action === 'check-all'){
+            list.querySelectorAll('input[type="checkbox"]').forEach(function(cb){ cb.checked = true; });
+            list.dispatchEvent(new Event('change'));
+          }else if(action === 'uncheck-all'){
+            list.querySelectorAll('input[type="checkbox"]').forEach(function(cb){ cb.checked = false; });
+            list.dispatchEvent(new Event('change'));
+          }else if(action === 'reset'){
+            localStorage.removeItem(target);
+            list.querySelectorAll('input[type="checkbox"]').forEach(function(cb){ cb.checked = false; });
+          }
+        });
+      });
+      // smooth scroll（若需要）
+      if (window.smoothScroll && smoothScroll.init) smoothScroll.init();
+    })();
+  </script>
+</body>
+</html>
+
